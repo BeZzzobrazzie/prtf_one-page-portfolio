@@ -1,22 +1,48 @@
 &__menu {
 
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
+  // height: 100%;
+
+  // @include media-breakpoint-down(md) {
+  //   display: block;
+  //   position: fixed;
+  //   top: -100%;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   overflow: auto;
+  //   background-color: $base;
+  //   padding: 92px 20px 20px 20px;
+  //   transition: all 0.3s ease 0s;
+
+  // }
+
+
+  display: block;
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
   height: 100%;
+  overflow: auto;
+  background-color: $base;
+  padding: 92px 20px 20px 20px;
+  transition: all 0.3s ease 0s;
 
-  @include media-breakpoint-down(md) {
-    display: block;
-    position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
+
+  @include mb-up($md) {
+    display: flex;
+    align-items: center;
     height: 100%;
-    overflow: auto;
-    background-color: $base;
-    padding: 92px 20px 20px 20px;
-    transition: all 0.3s ease 0s;
 
+    position: static;
+    width: unset;
+    overflow: unset;
+    padding: 0;
+    background-color: unset;
   }
+
 
 
   @import "_active/header__menu_active";

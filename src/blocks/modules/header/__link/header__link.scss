@@ -12,7 +12,7 @@
   }
 
 
-  @include media-breakpoint-up(md) {
+  @include mb-up($md) {
     display: flex;
     align-items: center;
     height: 100%;

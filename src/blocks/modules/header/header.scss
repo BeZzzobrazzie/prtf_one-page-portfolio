@@ -24,13 +24,13 @@
 
 
 
-  @include media-breakpoint-up(md) {
+  @include mb-up($md) {
     &:before {
       background-color: inherit;
     }
   }
 
-  @include media-breakpoint-up(xxl) {
+  @include mb-up($xxl) {
     // &:after {
     //   content: "";
     //   position: absolute;

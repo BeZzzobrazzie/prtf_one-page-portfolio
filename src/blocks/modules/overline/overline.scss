@@ -2,9 +2,12 @@
   font-family: 'Sen', sans-serif;
   @include adaptiv-font(16, 16);
   font-weight: 700;
-  color: $text;
   text-transform: uppercase;
 
   margin-bottom: 0;
+
+  //import section
+  @import '_color_white/overline_color_white';
+  @import "_color_light-grey/overline_color_light-grey";
 }
 

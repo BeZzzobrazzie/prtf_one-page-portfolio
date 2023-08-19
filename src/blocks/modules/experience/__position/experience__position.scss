@@ -1,10 +1,8 @@
-&__heading {
-
+&__position {
   margin-bottom: 16px;
-  
-  @include mb-up($md) {
-    margin-bottom: 32px;
-  }
 
+  @include mb-up($md) {
+    margin-bottom: 24px;
+  }
   //import section
 }

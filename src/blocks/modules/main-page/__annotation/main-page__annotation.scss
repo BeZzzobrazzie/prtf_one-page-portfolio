@@ -2,7 +2,7 @@
   position: relative;
   padding-top: 72px;
 
-  @include media-breakpoint-up(md) {
+  @include mb-up($md) {
     padding-top: 88px;
   }
 

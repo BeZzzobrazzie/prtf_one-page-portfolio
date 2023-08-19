@@ -3,7 +3,7 @@
   padding-left: 20px;
   padding-right: 20px;
 
-  @include media-breakpoint-up(md) {
+  @include mb-up($md) {
     padding-left: 0;
     padding-right: 0;
     position: relative;
@@ -13,7 +13,7 @@
     flex: 0 1 45%;
 
   }
-  @include media-breakpoint-up(xxl) {
+  @include mb-up($xxl) {
     transform: translateX(-44px);
     flex: 0 0 738px;
     z-index: 3;

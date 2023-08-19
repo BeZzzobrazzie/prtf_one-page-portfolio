@@ -8,11 +8,11 @@
 
   //import section
 
-  @include media-breakpoint-down(md) {
-    max-width: 100%;
-    height: auto;
-  }
-  @include media-breakpoint-up(md) {
+  // @include media-breakpoint-down(md) {
+  //   max-width: 100%;
+  //   height: auto;
+  // }
+  @include mb-up($md) {
     object-fit: cover;
     max-width: 100%;
     max-height: 100%;

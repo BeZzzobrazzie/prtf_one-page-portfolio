@@ -3,12 +3,12 @@
   justify-content: center;
   margin-bottom: 48px;
 
-  @include media-breakpoint-up(md) {
+  @include mb-up($md) {
     display: block;
     flex: 0 1 45%;
     margin-bottom: 0;
   }
-  @include media-breakpoint-up(xxl) {
+  @include mb-up($xxl) {
     transform: translateX(44px);
     flex: 0 0 750px;
     position: relative;

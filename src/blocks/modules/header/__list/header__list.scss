@@ -1,7 +1,7 @@
 &__list {
   display: block;
 
-  @include media-breakpoint-up(md) {
+  @include mb-up($md) {
     height: 100%;
     display: flex;
     align-items: stretch;

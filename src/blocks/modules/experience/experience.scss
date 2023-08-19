@@ -1,0 +1,21 @@
+.experience {
+
+  padding: 48px 0;
+
+  @include mb-up($md) {
+    padding-top: 80px;
+    padding-bottom: 104px;
+  }
+
+  @include mb-up($xxl) {
+    padding-top: 120px;
+    padding-bottom: 144px;
+  }
+
+  //import section
+  @import '__position/experience__position';
+  @import '__card/experience__card';
+  @import '__cards/experience__cards';
+  @import '__heading/experience__heading';
+  @import '__subheading/experience__subheading';
+}

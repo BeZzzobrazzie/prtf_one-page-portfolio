@@ -29,7 +29,7 @@
   }
 
 
-  @include media-breakpoint-up(md) {
+  @include mb-up($md) {
     display: none;
   }
 

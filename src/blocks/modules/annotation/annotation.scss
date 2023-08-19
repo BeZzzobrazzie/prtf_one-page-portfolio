@@ -1,7 +1,8 @@
 .annotation {
   position: relative;
+  //padding-bottom: 48px;
 
-  @include media-breakpoint-up(md) {
+  @include mb-up($md) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,7 +11,7 @@
     padding-bottom: 84px;
   }
 
-  @include media-breakpoint-up(xxl) {
+  @include mb-up($xxl) {
     &:after {
       content: "";
       background-color: $level1;
