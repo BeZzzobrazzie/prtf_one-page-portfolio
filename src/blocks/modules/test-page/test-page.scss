@@ -1,0 +1,15 @@
+.test-page {
+
+  background-color: grey;
+  height: 2000px;
+
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+
+  //import section
+  @import '__text/test-page__text';
+  @import '__text-conteiner/test-page__text-conteiner';
+  @import '__img/test-page__img';
+  @import '__img-conteiner/test-page__img-conteiner';
+}

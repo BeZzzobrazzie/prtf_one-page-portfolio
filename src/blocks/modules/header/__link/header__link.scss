@@ -1,0 +1,29 @@
+&__link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+
+
+  &:hover {
+    //border-bottom: 2px solid $primary;
+    text-decoration: underline 2px solid $primary;
+  }
+
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 24px;
+    transition: all 0.3s ease 0s;
+
+
+  
+    &:hover {
+      background-color: $primary;
+      text-decoration: none;
+    }
+  }
+}

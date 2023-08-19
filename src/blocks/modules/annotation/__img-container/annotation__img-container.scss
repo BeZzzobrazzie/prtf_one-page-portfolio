@@ -1,0 +1,19 @@
+&__img-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+
+  @include media-breakpoint-up(md) {
+    display: block;
+    flex: 0 1 45%;
+    margin-bottom: 0;
+  }
+  @include media-breakpoint-up(xxl) {
+    transform: translateX(44px);
+    flex: 0 0 750px;
+    position: relative;
+    z-index: 2;
+  }
+
+  //import section
+}

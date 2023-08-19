@@ -1,0 +1,8 @@
+.text-body-2 {
+  font-family: 'Sen', sans-serif;
+  @include adaptiv-font(16, 16);
+  color: $text;
+
+  margin-bottom: 0;
+
+}

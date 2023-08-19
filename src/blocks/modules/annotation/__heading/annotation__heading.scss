@@ -1,0 +1,10 @@
+&__heading {
+
+  margin-bottom: 16px;
+  
+  @include media-breakpoint-up(md) {
+    margin-bottom: 32px;
+  }
+
+  //import section
+}

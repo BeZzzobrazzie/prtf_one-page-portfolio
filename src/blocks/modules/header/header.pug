@@ -1,0 +1,29 @@
+
+- 
+  headerNav = [
+    {
+      "item": "Experience",
+    },
+    {
+      "item": "Work",
+    },
+    {
+      "item": "Photography",
+    },
+    {
+      "item": "Contact",
+    },
+    
+  ]
+
+header.header
+  .container-md
+    .header__body 
+      a.header__logo(href="#")
+        img(src="img/svg/logo.svg" alt="logo")
+      .header__burger
+      nav.header__menu 
+        ul.header__list 
+          each elem in headerNav
+            li.header__nav-elem
+              a.header__link.text-body-2(href="#")= elem.item

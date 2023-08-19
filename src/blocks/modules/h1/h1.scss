@@ -1,0 +1,8 @@
+.h1 {
+  font-family: 'Sen', sans-serif;
+  //font-size: 78px;
+  @include adaptiv-font(78, 32);
+  font-weight: 700;
+  color: $text;
+
+}

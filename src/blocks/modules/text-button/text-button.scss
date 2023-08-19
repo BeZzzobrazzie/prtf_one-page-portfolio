@@ -1,0 +1,11 @@
+.text-button {
+  font-family: 'Sen', sans-serif;
+  @include adaptiv-font(18, 18);
+  font-weight: 700;
+  color: $text;
+  text-transform: uppercase;
+
+  margin-bottom: 0;
+
+}
+

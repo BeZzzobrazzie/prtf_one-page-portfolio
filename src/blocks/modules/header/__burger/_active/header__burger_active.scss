@@ -1,0 +1,15 @@
+&_active {
+
+  &:before {
+    transform: rotate(45deg);
+    top: 4px;
+    transition: all 0.3s ease 0s;
+  }
+  &:after {
+    transform: rotate(-45deg);
+    bottom: 4px;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+
+  }
+}

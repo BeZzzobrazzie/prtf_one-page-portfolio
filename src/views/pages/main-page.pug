@@ -1,0 +1,37 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+  - const title = "Robin.W";
+
+block content
+  .main-page 
+    include ../../blocks/modules/header/header
+    .main-page__annotation
+      .annotation
+        
+        picture.annotation__img-container
+          source(srcset="img/annotation-person_750-650.webp 750w" sizes="750px" type="image/webp")
+          img.annotation__img(src="img/annotation-person_750-650.jpg" width="750" height="650" alt="annotation-person")
+        .annotation__body
+          .annotation__heading 
+            h1.h1 I’m&nbsp;Robin Williams.<br />A&nbsp;Product Designer based&nbsp;in&nbsp;Italy.
+          .annotation__description
+            p.text-body-1 I’m probably the most passionate designer you will ever get to work with. If you have a great project that needs some amazing skills, I’m your guy.
+
+    .content 
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque eius excepturi a reiciendis fugiat pariatur cumque, esse veritatis delectus laudantium quibusdam et. Iste obcaecati at voluptate repellat quo nulla et quod, officia commodi consequatur laudantium reiciendis non ipsum. Inventore eveniet tempore itaque qui accusantium? Voluptas iure iste id perspiciatis modi laudantium molestiae quia odit asperiores suscipit, veniam eligendi earum, itaque corrupti. Porro nihil voluptatum voluptate harum assumenda dolor illum vero? Quia recusandae aspernatur at distinctio similique aliquam ex dolorem repellendus odio, sint aliquid natus nesciunt facere blanditiis placeat iure earum eius illum maiores consequatur animi, adipisci quaerat? Enim, optio!
+    //- .content 
+    //-   .container-md
+    //-     .content__text 
+    //-       p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id minus facere fugit doloribus explicabo excepturi dolores quis animi et praesentium labore temporibus repudiandae, eligendi earum blanditiis ab suscipit nesciunt officia exercitationem fugiat laborum! Corrupti id incidunt accusamus tenetur architecto eos officia fugiat culpa quidem? Expedita blanditiis in earum veritatis cum temporibus dolores beatae reprehenderit nobis sit pariatur ex voluptatum, provident perspiciatis ut. Reiciendis inventore ut suscipit deleniti ipsam illo fugiat iste. Eveniet est harum, molestiae, veniam quia, obcaecati earum iusto perspiciatis asperiores qui placeat dolore blanditiis maxime sed autem deserunt mollitia excepturi itaque ipsa ducimus dolorum tenetur nostrum consectetur suscipit?
+    //-       p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id minus facere fugit doloribus explicabo excepturi dolores quis animi et praesentium labore temporibus repudiandae, eligendi earum blanditiis ab suscipit nesciunt officia exercitationem fugiat laborum! Corrupti id incidunt accusamus tenetur architecto eos officia fugiat culpa quidem? Expedita blanditiis in earum veritatis cum temporibus dolores beatae reprehenderit nobis sit pariatur ex voluptatum, provident perspiciatis ut. Reiciendis inventore ut suscipit deleniti ipsam illo fugiat iste. Eveniet est harum, molestiae, veniam quia, obcaecati earum iusto perspiciatis asperiores qui placeat dolore blanditiis maxime sed autem deserunt mollitia excepturi itaque ipsa ducimus dolorum tenetur nostrum consectetur suscipit?
+    //-       p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id minus facere fugit doloribus explicabo excepturi dolores quis animi et praesentium labore temporibus repudiandae, eligendi earum blanditiis ab suscipit nesciunt officia exercitationem fugiat laborum! Corrupti id incidunt accusamus tenetur architecto eos officia fugiat culpa quidem? Expedita blanditiis in earum veritatis cum temporibus dolores beatae reprehenderit nobis sit pariatur ex voluptatum, provident perspiciatis ut. Reiciendis inventore ut suscipit deleniti ipsam illo fugiat iste. Eveniet est harum, molestiae, veniam quia, obcaecati earum iusto perspiciatis asperiores qui placeat dolore blanditiis maxime sed autem deserunt mollitia excepturi itaque ipsa ducimus dolorum tenetur nostrum consectetur suscipit?
+    //-       p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id minus facere fugit doloribus explicabo excepturi dolores quis animi et praesentium labore temporibus repudiandae, eligendi earum blanditiis ab suscipit nesciunt officia exercitationem fugiat laborum! Corrupti id incidunt accusamus tenetur architecto eos officia fugiat culpa quidem? Expedita blanditiis in earum veritatis cum temporibus dolores beatae reprehenderit nobis sit pariatur ex voluptatum, provident perspiciatis ut. Reiciendis inventore ut suscipit deleniti ipsam illo fugiat iste. Eveniet est harum, molestiae, veniam quia, obcaecati earum iusto perspiciatis asperiores qui placeat dolore blanditiis maxime sed autem deserunt mollitia excepturi itaque ipsa ducimus dolorum tenetur nostrum consectetur suscipit?
+    //-       p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id minus facere fugit doloribus explicabo excepturi dolores quis animi et praesentium labore temporibus repudiandae, eligendi earum blanditiis ab suscipit nesciunt officia exercitationem fugiat laborum! Corrupti id incidunt accusamus tenetur architecto eos officia fugiat culpa quidem? Expedita blanditiis in earum veritatis cum temporibus dolores beatae reprehenderit nobis sit pariatur ex voluptatum, provident perspiciatis ut. Reiciendis inventore ut suscipit deleniti ipsam illo fugiat iste. Eveniet est harum, molestiae, veniam quia, obcaecati earum iusto perspiciatis asperiores qui placeat dolore blanditiis maxime sed autem deserunt mollitia excepturi itaque ipsa ducimus dolorum tenetur nostrum consectetur suscipit?
+    //-       p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id minus facere fugit doloribus explicabo excepturi dolores quis animi et praesentium labore temporibus repudiandae, eligendi earum blanditiis ab suscipit nesciunt officia exercitationem fugiat laborum! Corrupti id incidunt accusamus tenetur architecto eos officia fugiat culpa quidem? Expedita blanditiis in earum veritatis cum temporibus dolores beatae reprehenderit nobis sit pariatur ex voluptatum, provident perspiciatis ut. Reiciendis inventore ut suscipit deleniti ipsam illo fugiat iste. Eveniet est harum, molestiae, veniam quia, obcaecati earum iusto perspiciatis asperiores qui placeat dolore blanditiis maxime sed autem deserunt mollitia excepturi itaque ipsa ducimus dolorum tenetur nostrum consectetur suscipit?
+  
+
+block scripts
+  //script(src="js/vendor.js")
+  script(src="js/main.js")

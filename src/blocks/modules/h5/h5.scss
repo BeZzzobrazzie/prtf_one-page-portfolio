@@ -1,0 +1,8 @@
+.h5 {
+  font-family: 'Sen', sans-serif;
+  @include adaptiv-font(16, 16);
+  font-weight: 700;
+  color: $text;
+
+}
+

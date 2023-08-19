@@ -1,0 +1,9 @@
+.h4 {
+  font-family: 'Sen', sans-serif;
+  @include adaptiv-font(18, 18);
+  font-weight: 700;
+  color: $text;
+
+  @import "_color_level-1/h4_color_level-1";
+}
+

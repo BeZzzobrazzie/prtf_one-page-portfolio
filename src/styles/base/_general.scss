@@ -1,0 +1,14 @@
+h1, h2, h3, h4, h5, h6, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
+  --bs-gutter-x: 2.5rem;
+  @include media-breakpoint-up(md) {
+    --bs-gutter-x: 2rem;
+  }
+  @include media-breakpoint-up(xxl) {
+    --bs-gutter-x: 1.5rem;
+  }
+}

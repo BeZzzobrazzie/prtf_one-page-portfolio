@@ -1,0 +1,37 @@
+&__burger {
+  display: block;
+  position: relative;
+  width: 18px;
+  height: 11px;
+  z-index: 3;
+  transition: all 0.3s ease 0s;
+
+  &:before {
+    content: "";
+    background-color: #C4C4C4;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    right: 0;
+    top: 0;
+    transition: all 0.3s ease 0s;
+
+  }
+  &:after {
+    content: "";
+    background-color: #C4C4C4;
+    position: absolute;
+    width: 72%;
+    height: 3px;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease 0s;
+  }
+
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+
+  @import "_active/header__burger_active";
+}

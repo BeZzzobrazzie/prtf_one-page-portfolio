@@ -1,0 +1,9 @@
+.text-body-1 {
+  font-family: 'Sen', sans-serif;
+  @include adaptiv-font(18, 18);
+  color: $text;
+
+  margin-bottom: 0;
+
+  @import "_alpha_80/text-body-1_alpha_80";
+}

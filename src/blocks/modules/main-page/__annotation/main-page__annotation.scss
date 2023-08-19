@@ -1,0 +1,11 @@
+&__annotation {
+  position: relative;
+  padding-top: 72px;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 88px;
+  }
+
+
+  //import section
+}

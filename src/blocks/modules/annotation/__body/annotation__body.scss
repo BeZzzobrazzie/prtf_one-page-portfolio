@@ -1,0 +1,22 @@
+&__body {
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include media-breakpoint-up(md) {
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    z-index: 1;
+    transform: translateX(-64px);
+
+    flex: 0 1 45%;
+
+  }
+  @include media-breakpoint-up(xxl) {
+    transform: translateX(-44px);
+    flex: 0 0 738px;
+    z-index: 3;
+  }
+  //import section
+}

@@ -1,0 +1,33 @@
+.annotation {
+  position: relative;
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 84px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    &:after {
+      content: "";
+      background-color: $level1;
+      position: absolute;
+      z-index: 1;
+      left: 38%;
+      right: 0;
+      top: -88px;
+      bottom: 0;
+    }
+  }
+
+
+  //import section
+  @import '__description/annotation__description';
+  @import '__heading/annotation__heading';
+  @import '__body/annotation__body';
+  @import '__img-container/annotation__img-container';
+  @import '__img/annotation__img';
+}
