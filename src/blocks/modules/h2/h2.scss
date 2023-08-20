@@ -1,8 +1,16 @@
 .h2 {
   font-family: 'Sen', sans-serif;
-  @include adaptiv-font(55, 32);
+  //@include adaptiv-font(55, 32);
+  font-size: 32px;
   font-weight: 700;
   color: $text;
+  line-height: normal;
 
+  @include mb-up($md) {
+    font-size: 55px;
+  }
+
+  //import section
+  @import "_color_level-1/h2_color_level-1";
 }
 

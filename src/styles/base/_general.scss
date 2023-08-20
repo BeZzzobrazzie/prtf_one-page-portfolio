@@ -10,10 +10,11 @@ h1, h2, h3, h4, h5, h6, ul {
 body {
   font-weight: 400;
   font-family: 'Sen', sans-serif;
+  line-height: 1.5;
   color: $lightGrey;
 }
 
-.my-container {
+.container {
   //width: 100%;
   max-width: 100%;
   margin: 0 auto;
@@ -21,14 +22,14 @@ body {
 }
 
 @include mb-up($md) {
-  .my-container {
+  .container {
     max-width: 100%;
     padding: 0 40px;
   }
 }
 
 @include mb-up($xxl) {
-  .my-container {
+  .container {
     max-width: 1376px;
 }
 }

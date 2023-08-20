@@ -1,16 +1,22 @@
 &__burger {
+  box-sizing: content-box;
   display: block;
   position: relative;
   width: 18px;
   height: 11px;
+  // width: 28px;
+  // height: 21px;
+  // padding: 5px;
   z-index: 3;
   transition: all 0.3s ease 0s;
+  border: 7px solid transparent;
 
   &:before {
     content: "";
     background-color: #C4C4C4;
     position: absolute;
     width: 100%;
+    // width: 18px;
     height: 3px;
     right: 0;
     top: 0;
@@ -22,6 +28,7 @@
     background-color: #C4C4C4;
     position: absolute;
     width: 72%;
+    // width: 13px;
     height: 3px;
     right: 0;
     bottom: 0;

@@ -1,7 +1,6 @@
 &__img-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 48px;
+
+  margin-bottom: 35px;
 
   @include mb-up($md) {
     display: block;

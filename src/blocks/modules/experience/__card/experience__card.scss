@@ -4,6 +4,7 @@
     counter-increment: section;
     content: "0" counter(section);
     font-size: 117px;
+    line-height: normal;
   }
 
   //import section

@@ -30,21 +30,22 @@ block content
     include ../../blocks/modules/header/header
     .main-page__annotation
       .annotation
-        
-        picture.annotation__img-container
-          //source(srcset="img/annotation-person_750-650.webp 750w" sizes="750px" type="image/webp")
-          //img.annotation__img(src="img/annotation-person_750-650.jpg" width="750" height="650" alt="annotation-person")
-          img.annotation__img(src="img/person.jpg" width="750" height="650" alt="annotation-person")
+        .annotation__img-container
+          picture
+            source(media="(min-width: 768px)" srcset="img/person.webp 750w" sizes="750px" type="image/webp")
+            source(srcset="img/annotation-person_750-650.webp" type="image/webp")
+            img.annotation__img(src="img/person.jpg" width="750" height="650" alt="annotation-person")
 
         .annotation__body
           .annotation__heading 
-            h1.h1 I’m&nbsp;Robin Williams.<br />A&nbsp;Product Designer based&nbsp;in&nbsp;Italy.
+            //h1.h1 I’m&nbsp;Robin Williams.<br />A&nbsp;Product Designer based&nbsp;in&nbsp;Italy.
+            h1.h1 I’m Robin Williams. A Product Designer #[span.accent.accent_color_light-grey based in Italy.]
           .annotation__description
             p.text-body-1 I’m probably the most passionate designer you will ever get to work with. If you have a great project that needs some amazing skills, I’m your guy.
 
     .main-page__experience
       .experience
-        .my-container
+        .container
           .experience__subheading
             p.overline work experience
           .experience__heading 
@@ -57,6 +58,19 @@ block content
                 .experience__description 
                   p.text-body-2= elem.description
 
+
+    .main-page__values
+      .values 
+        .values__text-content
+          .values__heading 
+            h2.h2.h2_color_level-1 Philosophy & values
+          .values__description 
+            p.text-body-1.text-body-1_color_dark-grey I think everyone wants the same thing - relationship with humanity, peace with the metaphysical, and experience with the universe. I try to grasp these things with my values: authenticity, creativity, & hospitality.
+          a.values__link.text-body-2.text-body-2_color_level-1 More about me
+        .values__img-container
+          picture
+            source(srcset="img/values-sphere.webp" type="image/webp")
+            img.values__img(src="img/values-sphere.jpeg" alt="")
 
 
 block scripts
