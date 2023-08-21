@@ -1,0 +1,8 @@
+&__main-content {
+
+  @include mb-up($md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  //import section
+}

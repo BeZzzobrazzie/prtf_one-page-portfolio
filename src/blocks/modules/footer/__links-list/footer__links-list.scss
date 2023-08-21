@@ -1,0 +1,11 @@
+&__links-list {
+
+  list-style-type: none;
+
+  @include mb-up($md) {
+    column-count: 2;
+
+  }
+
+  //import section
+}

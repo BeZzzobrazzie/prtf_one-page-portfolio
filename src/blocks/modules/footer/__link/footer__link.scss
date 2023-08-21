@@ -1,0 +1,11 @@
+&__link {
+  display: inline-block;
+  min-height: 48px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline 1px solid;
+  }
+
+  //import section
+}

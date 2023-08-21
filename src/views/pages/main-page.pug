@@ -24,6 +24,38 @@ block variables
         "description": "I started my design career with Dribbble. I was incharge of creating illustrations for the platform."
       },
     ]
+  - 
+    footerLinks = [
+      {
+        "name": "Home",
+        "url": "#",
+      },
+      {
+        "name": "About",
+        "url": "#",
+      },
+      {
+        "name": "Work",
+        "url": "#",
+      },
+      {
+        "name": "Process",
+        "url": "#",
+      },
+      {
+        "name": "Store",
+        "url": "#",
+      },
+      {
+        "name": "Blog",
+        "url": "#",
+      },
+      {
+        "name": "Reading List",
+        "url": "#",
+      },
+      
+    ]
 
 block content
   .main-page 
@@ -61,17 +93,42 @@ block content
 
     .main-page__values
       .values 
-        .values__text-content
-          .values__heading 
-            h2.h2.h2_color_level-1 Philosophy & values
-          .values__description 
-            p.text-body-1.text-body-1_color_dark-grey I think everyone wants the same thing - relationship with humanity, peace with the metaphysical, and experience with the universe. I try to grasp these things with my values: authenticity, creativity, & hospitality.
-          a.values__link.text-body-2.text-body-2_color_level-1 More about me
-        .values__img-container
-          picture
-            source(srcset="img/values-sphere.webp" type="image/webp")
-            img.values__img(src="img/values-sphere.jpeg" alt="")
+        .values__container
+          .values__text-content
+            .values__heading 
+              h2.h2.h2_color_level-1 Philosophy & values
+            .values__description 
+              p.text-body-1.text-body-1_color_dark-grey I think everyone wants the same thing - relationship with humanity, peace with the metaphysical, and experience with the universe. I try to grasp these things with my values: authenticity, creativity, & hospitality.
+            a.values__link.text-body-2.text-body-2_color_level-1(href="#") More about me
+          .values__img-container
+            picture
+              source(srcset="img/values-sphere.webp" type="image/webp")
+              img.values__img(src="img/values-sphere.jpeg" alt="")
 
+
+    .main-page__footer
+      footer.footer 
+        .container
+          .footer__main-content
+            .footer__logo-social
+              a.footer__logo-wrap(href="#")
+                img.footer__logo(src="img/svg/logo.svg" alt="logo")
+              .footer__social-wrap
+                a.footer__social(href="#")
+                  img(src="img/svg/twitter.svg" alt="link to twitter")
+                a.footer__social(href="#")
+                  img(src="img/svg/dribbble.svg" alt="link to dribbble")
+                a.footer__social(href="#")
+                  img(src="img/svg/linkedin.svg" alt="link to linkedin")
+            .footer__links-wrap
+              ul.footer__links-list
+                each elem in footerLinks 
+                  li.footer__links-item
+                    a.footer__link.text-body-2.text-body-2_color_white(href=elem.url)= elem.name
+
+          .footer__copyright
+            p Not Copyright 2020 • Robin Williams. Webflow cloneable
+              
 
 block scripts
   //script(src="js/vendor.js")

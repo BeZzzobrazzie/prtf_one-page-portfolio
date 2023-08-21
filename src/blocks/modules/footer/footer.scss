@@ -1,0 +1,21 @@
+.footer {
+
+  padding: 48px 0;
+  background-color: $level1;
+
+  @include mb-up($md) {
+    padding: 80px 0;
+  }
+
+  //import section
+  @import '__main-content/footer__main-content';
+  @import '__links-list/footer__links-list';
+  @import '__logo-wrap/footer__logo-wrap';
+  @import '__copyright/footer__copyright';
+  @import '__link/footer__link';
+  @import '__links-wrap/footer__links-wrap';
+  @import '__social/footer__social';
+  @import '__social-wrap/footer__social-wrap';
+  @import '__logo/footer__logo';
+  @import '__logo-social/footer__logo-social';
+}

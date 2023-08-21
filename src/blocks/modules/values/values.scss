@@ -2,13 +2,10 @@
 
   background-color: $peachAccent;
 
-  @include mb-up($md) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
 
-  }
 
   //import section
+  @import '__container/values__container';
   @import '__img-container/values__img-container';
   @import '__img/values__img';
   @import '__link/values__link';
