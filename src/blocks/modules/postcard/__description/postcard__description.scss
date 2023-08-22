@@ -1,5 +1,4 @@
 &__description {
-
   margin-bottom: 90px;
 
   @include mb-up($md) {
@@ -9,6 +8,5 @@
   @include mb-up($xxl) {
     margin-bottom: 134px;
   }
-
   //import section
 }

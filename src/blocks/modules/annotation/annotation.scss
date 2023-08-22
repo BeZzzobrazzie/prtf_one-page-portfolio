@@ -1,6 +1,6 @@
 .annotation {
   position: relative;
-  //padding-bottom: 48px;
+  padding-bottom: 48px;
 
   @include mb-up($md) {
     display: flex;
@@ -8,7 +8,7 @@
     justify-content: center;
     position: relative;
     padding-top: 80px;
-    padding-bottom: 84px;
+    padding-bottom: 82px;
   }
 
   @include mb-up($xxl) {

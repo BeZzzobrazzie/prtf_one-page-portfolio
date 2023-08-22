@@ -8,8 +8,7 @@
   }
 
   @include mb-up($xxl) {
-    padding-top: 120px;
-    padding-bottom: 144px;
+    padding: 120px 0;
   }
 
   //import section

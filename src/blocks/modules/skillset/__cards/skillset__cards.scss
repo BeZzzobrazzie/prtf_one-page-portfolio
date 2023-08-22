@@ -1,0 +1,11 @@
+&__cards {
+
+
+  @include mb-up($md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 24px;
+  }
+
+  //import section
+}

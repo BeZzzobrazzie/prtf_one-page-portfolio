@@ -1,0 +1,9 @@
+&__text {
+  margin-bottom: 48px;
+
+  @include mb-up($xxl) {
+    margin-bottom: 0;
+  }
+
+  //import section
+}
