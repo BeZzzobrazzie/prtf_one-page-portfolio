@@ -1,0 +1,12 @@
+.carousel {
+  display: none;
+  @include mb-up($xxl) {
+    display: block;
+  }
+  
+  
+  //import section
+  @import '__wrap-item/carousel__wrap-item';
+  @import '__img/carousel__img';
+  @import '__item/carousel__item';
+}

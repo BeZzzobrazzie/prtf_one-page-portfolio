@@ -48,6 +48,33 @@ block variables
       },
       
     ]
+  -
+    carouselItems = [
+      {
+        "logoPath": "img/svg/cbre.svg",
+        "alt": "CBRE",
+      },
+      {
+        "logoPath": "img/svg/epiq.svg",
+        "alt": "EPIQ",
+      },
+      {
+        "logoPath": "img/svg/f.svg",
+        "alt": "F",
+      },
+      {
+        "logoPath": "img/svg/leaf.svg",
+        "alt": "Leaf",
+      },
+      {
+        "logoPath": "img/svg/a-place-for-mom.svg",
+        "alt": "a Place for Mom",
+      },
+      {
+        "logoPath": "img/svg/m.svg",
+        "alt": "M",
+      },      
+    ]
   - 
     footerLinks = [
       {
@@ -142,7 +169,18 @@ block content
                   h3.h3.skillset__card-title= elem.title
                   p.text-body-2.skillset__card-text= elem.text
 
-
+    .main-page__carousel
+      .container
+        .carousel
+          each elem in carouselItems 
+            .carousel__wrap-item
+              .carousel__item
+                img.carousel__img(src=elem.logoPath alt=elem.alt)
+      .carousel-m
+        each elem in carouselItems 
+          .carousel-m__wrap-item
+            .carousel-m__item
+              img.carousel-m__img(src=elem.logoPath alt=elem.alt)
 
     .main-page__postcard 
       .postcard.postcard_bc_violet
@@ -184,4 +222,6 @@ block content
 
 block scripts
   //script(src="js/vendor.js")
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js')
+  script(type='text/javascript' src='//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js')
   script(src="js/main.js")

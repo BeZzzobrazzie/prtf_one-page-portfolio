@@ -2,6 +2,7 @@
   background-color: $base;
 
   //import section
+  @import '__carousel/main-page__carousel';
   @import '__skillset/main-page__skillset';
   @import '__postcard/main-page__postcard';
   @import '__experience/main-page__experience';
