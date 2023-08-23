@@ -1,0 +1,7 @@
+&__wrap {
+  @include mb-up($xxl) {
+
+    column-count: 2;
+  }
+  //import section
+}

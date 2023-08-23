@@ -1,0 +1,10 @@
+&__card {
+  background-color: $level1;
+  margin-bottom: 48px;
+
+  @include mb-up($md) {
+    margin-bottom: 24px;
+
+  }
+  //import section
+}

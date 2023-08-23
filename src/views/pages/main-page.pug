@@ -75,6 +75,30 @@ block variables
         "alt": "M",
       },      
     ]
+  -
+    projectsCards = [
+      {
+        "imgPath": "img/salad",
+        "title": "Restaurant Website Design",
+        "description": "I worked with the guys at CBRE to redesign their entire website and mobile app fro both Android and iOS. This project lasted for 4 months and was a very challenging one.",
+      },
+      {
+        "imgPath": "img/screen",
+        "title": "Restaurant Website Design",
+        "description": "I worked with the guys at CBRE to redesign their entire website and mobile app fro both Android and iOS. This project lasted for 4 months and was a very challenging one.",
+      },
+      {
+        "imgPath": "img/weather",
+        "title": "Restaurant Website Design",
+        "description": "I worked with the guys at CBRE to redesign their entire website and mobile app fro both Android and iOS. This project lasted for 4 months and was a very challenging one.",
+      },
+      {
+        "imgPath": "img/website",
+        "title": "Restaurant Website Design",
+        "description": "I worked with the guys at CBRE to redesign their entire website and mobile app fro both Android and iOS. This project lasted for 4 months and was a very challenging one.",
+      },
+      
+    ]
   - 
     footerLinks = [
       {
@@ -181,6 +205,28 @@ block content
           .carousel-m__wrap-item
             .carousel-m__item
               img.carousel-m__img(src=elem.logoPath alt=elem.alt)
+
+    .main-page__projects 
+      .projects
+        .container
+          .projects__wrap
+            .projects__subheading
+              p.overline my projects
+            .projects__heading 
+              h2.h2 Work that I’ve done for the past 8 years
+            each elem in projectsCards 
+              .projects__card 
+                .projects__img-container
+                  picture
+                    source(srcset=`${elem.imgPath}.webp` type="image/webp")
+                    img.postcard__img(src=`${elem.imgPath}.jpg` alt="")
+                .projects__card-text
+                  .projects__card-title
+                    h3.h3= elem.title
+                  .projects__card-description
+                    p.text-body-1.text-body-1_color_light-grey= elem.description
+            .projects__view-all
+
 
     .main-page__postcard 
       .postcard.postcard_bc_violet
