@@ -83,12 +83,12 @@ block variables
         "description": "I worked with the guys at CBRE to redesign their entire website and mobile app fro both Android and iOS. This project lasted for 4 months and was a very challenging one.",
       },
       {
-        "imgPath": "img/screen",
+        "imgPath": "img/weather",
         "title": "Restaurant Website Design",
         "description": "I worked with the guys at CBRE to redesign their entire website and mobile app fro both Android and iOS. This project lasted for 4 months and was a very challenging one.",
       },
       {
-        "imgPath": "img/weather",
+        "imgPath": "img/screen",
         "title": "Restaurant Website Design",
         "description": "I worked with the guys at CBRE to redesign their entire website and mobile app fro both Android and iOS. This project lasted for 4 months and was a very challenging one.",
       },
@@ -96,8 +96,7 @@ block variables
         "imgPath": "img/website",
         "title": "Restaurant Website Design",
         "description": "I worked with the guys at CBRE to redesign their entire website and mobile app fro both Android and iOS. This project lasted for 4 months and was a very challenging one.",
-      },
-      
+      },     
     ]
   - 
     footerLinks = [
@@ -219,13 +218,16 @@ block content
                 .projects__img-container
                   picture
                     source(srcset=`${elem.imgPath}.webp` type="image/webp")
-                    img.postcard__img(src=`${elem.imgPath}.jpg` alt="")
+                    img.projects__img(src=`${elem.imgPath}.jpg` alt="")
                 .projects__card-text
                   .projects__card-title
                     h3.h3= elem.title
                   .projects__card-description
                     p.text-body-1.text-body-1_color_light-grey= elem.description
             .projects__view-all
+              a.text-button.projects__view-all-link(href="#") view all projects
+
+
 
 
     .main-page__postcard 

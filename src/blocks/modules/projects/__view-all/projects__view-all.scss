@@ -1,0 +1,13 @@
+&__view-all {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+
+  @include mb-up($xxl) {
+    margin-top: 80px;
+  }
+  @include mb-up($xxl) {
+    margin-top: 91px;
+  }
+  //import section
+}
