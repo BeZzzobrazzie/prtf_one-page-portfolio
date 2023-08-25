@@ -1,0 +1,11 @@
+&__card-text {
+  display: grid;
+  gap: 64px 0;
+
+  padding: 32px;
+
+  @include mb-up($xxl) {
+    padding: 64px;
+  }
+  //import section
+}

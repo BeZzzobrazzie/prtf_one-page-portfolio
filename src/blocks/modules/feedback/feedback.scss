@@ -1,0 +1,24 @@
+.feedback {
+
+  padding: 48px 0;
+
+  @include mb-up($md) {
+    padding: 80px 0;
+  }
+  @include mb-up($xxl) {
+    padding: 120px 0;
+  }
+
+  //import section
+  @import '__card-person/feedback__card-person';
+  @import '__card-title/feedback__card-title';
+  @import '__card-text/feedback__card-text';
+  @import '__img/feedback__img';
+  @import '__img-container/feedback__img-container';
+  @import '__card/feedback__card';
+  @import '__cards/feedback__cards';
+  @import '__description/feedback__description';
+  @import '__heading/feedback__heading';
+  @import '__text-content/feedback__text-content';
+  @import '__wrap/feedback__wrap';
+}
