@@ -1,0 +1,15 @@
+.dribbble {
+
+  padding: 64px 0;
+
+  @include mb-up($md) {
+    padding: 80px 0;
+  }
+  @include mb-up($xxl) {
+    padding: 120px 0;
+  }
+  
+
+  //import section
+  @import '__wrap/dribbble__wrap';
+}
