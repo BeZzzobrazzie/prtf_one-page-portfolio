@@ -119,6 +119,79 @@ block variables
       },
     ]
   - 
+    photography = [
+      {
+        "category": "Italy",
+        "photo": [
+          {
+            "imgPath": "img/Italy-1",
+          },
+          {
+            "imgPath": "img/Italy-2",
+          },
+          {
+            "imgPath": "img/Italy-3",
+          },
+          {
+            "imgPath": "img/Italy-4",
+          },
+        ]
+      },
+      {
+        "category": "Australia",
+        "photo": [
+          {
+            "imgPath": "img/Australia-1",
+          },
+          {
+            "imgPath": "img/Australia-2",
+          },
+          {
+            "imgPath": "img/Australia-3",
+          },
+          {
+            "imgPath": "img/Australia-4",
+          },
+        ]
+      },
+      {
+        "category": "India",
+        "photo": [
+          {
+            "imgPath": "img/India-1",
+          },
+          {
+            "imgPath": "img/India-2",
+          },
+          {
+            "imgPath": "img/India-3",
+          },
+          {
+            "imgPath": "img/India-4",
+          },
+        ]
+      },
+      {
+        "category": "Brazil",
+        "photo": [
+          {
+            "imgPath": "img/Brazil-1",
+          },
+          {
+            "imgPath": "img/Brazil-2",
+          },
+          {
+            "imgPath": "img/Brazil-3",
+          },
+          {
+            "imgPath": "img/Brazil-4",
+          },
+        ]
+      },
+      
+    ]
+
+  - 
     footerLinks = [
       {
         "name": "Home",
@@ -303,6 +376,30 @@ block content
                     .feedback__card-person
                       p.text-body-1.text-body-1_color_light-grey= elem.person
                       p.text-body-1.text-body-1_color_light-grey= elem.position
+
+    .main-page__photography
+      .photography
+        .container 
+          .photography__wrap 
+            .photography__text-content 
+              .photography__heading 
+                h2.h2 Photography
+              .photography__description 
+                p.text-body-1.text-body-1_color_light-grey Here is a collection of my best travel pictures that I took while travelling places all around the world. 
+            .photography__gallery
+              .photography__gallery-btns 
+                each elem in photography
+                  button.text-button.photography__gallery-btn= elem.category
+              each elem in photography
+                .photography__img-list
+                  each item in elem.photo
+                    .photography__img-item
+                      picture
+                        source(srcset=`${item.imgPath}.webp` type="image/webp")
+                        img.photography__img(src=`${item.imgPath}.jpg` alt="")
+                       
+
+
 
     .main-page__footer
       footer.footer 

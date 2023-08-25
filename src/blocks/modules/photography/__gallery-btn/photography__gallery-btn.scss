@@ -1,0 +1,11 @@
+&__gallery-btn {
+  padding: 12px 16px;
+  border: 1px solid $primary;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $primary;
+    transition: background-color 0.3s ease;
+  }
+  //import section
+}

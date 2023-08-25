@@ -1,0 +1,8 @@
+&__text-content {
+  margin-bottom: 40px;
+
+  @include mb-up($md) {
+    margin-bottom: 64px;
+  }
+  //import section
+}
