@@ -7,6 +7,7 @@
     padding: 120px 0;
   }
   //import section
+  @import '__input-wrap/contact__input-wrap';
   @import '__input/contact__input';
   @import '__label/contact__label';
   @import '__form/contact__form';

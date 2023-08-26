@@ -333,7 +333,7 @@ block content
 
     .main-page__dribbble
       .dribbble 
-        .container 
+        .container-sm
           .dribbble__wrap 
             .dribbble__text-content 
               .dribbble__heading 
@@ -409,7 +409,7 @@ block content
                        
     .main-page__contact
       .contact 
-        .container 
+        .container-sm 
           .contact__wrap 
             .contact__text-content 
               .contact__heading 
@@ -417,12 +417,15 @@ block content
               .contact__description 
                 p.text-body-1.text-body-1_color_light-grey Now that you know a lot about me, let me know if you are interested to work with me.
             form.contact__form
-              label.contact__label Name
-               input.contact__input(type="text")
-              label.contact__label Email 
-                input.contact__input(type="email")
-              label.contact__label Message
-                textarea.contact__input.contact__message(name="", cols="30", rows="2") 
+              label.contact__label.text-body-2.text-body-2_color_white Name
+                .contact__input-wrap
+                  input.contact__input.text-body-1(type="text")
+              label.contact__label.text-body-2.text-body-2_color_white Email 
+                .contact__input-wrap
+                  input.contact__input.text-body-1(type="email")
+              label.contact__label.text-body-2.text-body-2_color_white Message
+                .contact__input-wrap  
+                  textarea.contact__input.text-body-1(name="", cols="30", rows="2") 
               button Let’s get started
 
 
@@ -447,7 +450,7 @@ block content
                     a.footer__link.text-body-2.text-body-2_color_white(href=elem.url)= elem.name
 
           .footer__copyright
-            p Not Copyright 2020 • Robin Williams. Webflow cloneable
+            p Not Copyright 2023 • Robin Williams. Webflow cloneable
               
 
 block scripts

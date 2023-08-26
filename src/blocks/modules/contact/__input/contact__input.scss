@@ -2,5 +2,12 @@
   background-color: $level1;
   border: unset;
   line-height: 3;
+  display: block;
+  width: 100%;
+  padding: 0 15px;
+
+  &:focus {
+    outline: unset;
+  }
   //import section
 }

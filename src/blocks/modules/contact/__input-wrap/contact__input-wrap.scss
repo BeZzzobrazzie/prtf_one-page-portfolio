@@ -1,0 +1,31 @@
+&__input-wrap {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    background: none repeat scroll 0 0 transparent;
+    height: 2px;
+    width: 0;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  }
+  
+  &:hover {
+    &::after {
+      width: 10%; 
+      left: 0; 
+    }
+  }
+  &:focus-within {
+    &::after {
+      width: 100%; 
+      left: 0; 
+    }
+  }
+
+
+  //import section
+}
