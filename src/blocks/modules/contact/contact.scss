@@ -1,0 +1,17 @@
+.contact {
+  padding: 48px 0;
+  @include mb-up($md) {
+    padding: 80px 0;
+  }
+  @include mb-up($xxl) {
+    padding: 120px 0;
+  }
+  //import section
+  @import '__input/contact__input';
+  @import '__label/contact__label';
+  @import '__form/contact__form';
+  @import '__description/contact__description';
+  @import '__heading/contact__heading';
+  @import '__text-content/contact__text-content';
+  @import '__wrap/contact__wrap';
+}

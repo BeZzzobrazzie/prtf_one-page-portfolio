@@ -407,8 +407,23 @@ block content
                           source(srcset=`${item.imgPath}.webp` type="image/webp")
                           img.photography__img(src=`${item.imgPath}.jpg` width="332px" height="420px" alt="")
                        
-
-
+    .main-page__contact
+      .contact 
+        .container 
+          .contact__wrap 
+            .contact__text-content 
+              .contact__heading 
+                h2.h2 Let’s get started
+              .contact__description 
+                p.text-body-1.text-body-1_color_light-grey Now that you know a lot about me, let me know if you are interested to work with me.
+            form.contact__form
+              label.contact__label Name
+               input.contact__input(type="text")
+              label.contact__label Email 
+                input.contact__input(type="email")
+              label.contact__label Message
+                textarea.contact__input.contact__message(name="", cols="30", rows="2") 
+              button Let’s get started
 
 
     .main-page__footer
