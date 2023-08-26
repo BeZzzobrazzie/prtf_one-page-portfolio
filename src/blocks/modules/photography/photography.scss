@@ -1,6 +1,20 @@
 .photography {
 
+  padding: 48px 0;
+  @include mb-up($md) {
+    padding: 80px 0;
+  }
+  @include mb-up($xxl) {
+    padding: 120px 0;
+  }
+
   //import section
+  @import '__description/photography__description';
+  @import '__heading/photography__heading';
+  @import '__picture/photography__picture';
+  @import '__img/photography__img';
+  @import '__img-item/photography__img-item';
+  @import '__img-list/photography__img-list';
   @import '__gallery-btn/photography__gallery-btn';
   @import '__text-content/photography__text-content';
   @import '__gallery-btns/photography__gallery-btns';

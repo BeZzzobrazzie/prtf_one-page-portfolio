@@ -188,9 +188,7 @@ block variables
           },
         ]
       },
-      
     ]
-
   - 
     footerLinks = [
       {
@@ -388,16 +386,28 @@ block content
                 p.text-body-1.text-body-1_color_light-grey Here is a collection of my best travel pictures that I took while travelling places all around the world. 
             .photography__gallery
               .photography__gallery-btns 
-                each elem in photography
-                  button.text-button.photography__gallery-btn= elem.category
-              each elem in photography
-                .photography__img-list
-                  each item in elem.photo
-                    .photography__img-item
-                      picture
-                        source(srcset=`${item.imgPath}.webp` type="image/webp")
-                        img.photography__img(src=`${item.imgPath}.jpg` alt="")
+                each elem, index in photography
+                  if index == 0
+                    button.text-button.photography__gallery-btn.photography__gallery-btn_active= elem.category
+                  else 
+                    button.text-button.photography__gallery-btn= elem.category
+              each elem, index in photography
+                if index == 0
+                  .photography__img-list.photography__img-list_active
+                    each item in elem.photo
+                      .photography__img-item
+                        picture.photography__picture
+                          source(srcset=`${item.imgPath}.webp` type="image/webp")
+                          img.photography__img(src=`${item.imgPath}.jpg` width="332px" height="420px" alt="")
+                else 
+                  .photography__img-list
+                    each item in elem.photo
+                      .photography__img-item
+                        picture.photography__picture
+                          source(srcset=`${item.imgPath}.webp` type="image/webp")
+                          img.photography__img(src=`${item.imgPath}.jpg` width="332px" height="420px" alt="")
                        
+
 
 
 
