@@ -1,8 +1,9 @@
 .experience {
-
+  scroll-margin: 72px;
   padding: 48px 0;
 
   @include mb-up($md) {
+    scroll-margin: 88px;
     padding-top: 80px;
     padding-bottom: 104px;
   }

@@ -1,10 +1,7 @@
 .main-page {
   background-color: $base;
+  flex: 1 0 auto;
 
   //import section
-  @import '__carousel/main-page__carousel';
-  @import '__skillset/main-page__skillset';
-  @import '__postcard/main-page__postcard';
-  @import '__experience/main-page__experience';
   @import "__annotation/main-page__annotation";
 }

@@ -222,25 +222,24 @@ block variables
     ]
 
 block content
-  .main-page 
+  .wrapper
     include ../../blocks/modules/header/header
-    .main-page__annotation
-      .annotation
-        .annotation__img-container
-          picture
-            source(media="(min-width: 768px)" srcset="img/person.webp 750w" sizes="750px" type="image/webp")
-            source(srcset="img/annotation-person_750-650.webp" type="image/webp")
-            img.annotation__img(src="img/person.jpg" width="750" height="650" alt="annotation-person")
+    main.main-page 
+      .main-page__annotation
+        .annotation
+          .annotation__img-container
+            picture
+              source(media="(min-width: 768px)" srcset="img/person.webp 750w" sizes="750px" type="image/webp")
+              source(srcset="img/annotation-person_750-650.webp" type="image/webp")
+              img.annotation__img(src="img/person.jpg" width="750" height="650" alt="annotation-person")
 
-        .annotation__body
-          .annotation__heading 
-            //h1.h1 I’m&nbsp;Robin Williams.<br />A&nbsp;Product Designer based&nbsp;in&nbsp;Italy.
-            h1.h1 I’m Robin Williams. A Product Designer #[span.accent.accent_color_light-grey based in Italy.]
-          .annotation__description
-            p.text-body-1 I’m probably the most passionate designer you will ever get to work with. If you have a great project that needs some amazing skills, I’m your guy.
+          .annotation__body
+            .annotation__heading 
+              h1.h1 I’m Robin Williams. A Product Designer #[span.accent.accent_color_light-grey based in Italy.]
+            .annotation__description
+              p.text-body-1 I’m probably the most passionate designer you will ever get to work with. If you have a great project that needs some amazing skills, I’m your guy.
 
-    .main-page__experience
-      .experience
+      section.experience(id="work-experience")
         .container
           .experience__subheading
             p.overline work experience
@@ -254,22 +253,20 @@ block content
                 .experience__description 
                   p.text-body-2= elem.description
 
-    .main-page__postcard 
-      .postcard 
+      section.postcard 
         .postcard__container 
           .postcard__text-content 
             .postcard__heading 
               h2.h2.h2_color_level-1 Philosophy & values
             .postcard__description 
               p.text-body-1.text-body-1_color_dark-grey I think everyone wants the same thing - relationship with humanity, peace with the metaphysical, and experience with the universe. I try to grasp these things with my values: authenticity, creativity, & hospitality.
-            a.underlined-link.text-body-2.text-body-2_color_level-1(href="#") More about me
+            a.underlined-link.text-body-2.text-body-2_color_level-1(href="https://example.com/" target="_blank" rel="noopener") More about me
           .postcard__img-container 
             picture
               source(srcset="img/values-sphere.webp" type="image/webp")
               img.postcard__img(src="img/values-sphere.jpeg" alt="")
 
-    .main-page__skillset 
-      .skillset 
+      section.skillset 
         .container 
           .skillset__wrap 
             .skillset__text 
@@ -278,25 +275,24 @@ block content
             .skillset__cards
               each elem in skillsetCards
                 .skillset__card 
-                  img.skillset__card-logo(src=elem.logoPath width="32px" height="32px" alt="") 
+                  img.skillset__card-logo(src=elem.logoPath width="32" height="32" alt="") 
                   h3.h3.skillset__card-title= elem.title
                   p.text-body-2.skillset__card-text= elem.text
 
-    .main-page__carousel
-      .container
-        .carousel
+      .main-page__carousel
+        .container
+          .carousel
+            each elem in carouselItems 
+              .carousel__wrap-item
+                .carousel__item
+                  img.carousel__img(src=elem.logoPath alt=elem.alt)
+        .carousel-m
           each elem in carouselItems 
-            .carousel__wrap-item
-              .carousel__item
-                img.carousel__img(src=elem.logoPath alt=elem.alt)
-      .carousel-m
-        each elem in carouselItems 
-          .carousel-m__wrap-item
-            .carousel-m__item
-              img.carousel-m__img(src=elem.logoPath alt=elem.alt)
+            .carousel-m__wrap-item
+              .carousel-m__item
+                img.carousel-m__img(src=elem.logoPath alt=elem.alt)
 
-    .main-page__projects 
-      .projects
+      section.projects(id="projects")
         .container
           .projects__wrap
             .projects__subheading
@@ -315,24 +311,22 @@ block content
                   .projects__card-description
                     p.text-body-1.text-body-1_color_light-grey= elem.description
             .projects__view-all
-              a.text-button.projects__view-all-link(href="#") view all projects
+              a.text-button.projects__view-all-link(href="https://example.com/" target="_blank" rel="noopener") view all projects
 
-    .main-page__postcard 
-      .postcard.postcard_bc_violet
+      section.postcard.postcard_bc_violet
         .postcard__container 
           .postcard__text-content 
             .postcard__heading 
               h2.h2.h2_color_level-1 Instagram
             .postcard__description 
               p.text-body-1.text-body-1_color_dark-grey If you area a person who enjoys photography, then I highly recommend that you check out my Instagram. I’m an avid traveller and I capture the best moments that I would love to cherish with the world
-            a.underlined-link.text-body-2.text-body-2_color_level-1(href="#") Follow me on IG
+            a.underlined-link.text-body-2.text-body-2_color_level-1(href="https://example.com/" target="_blank" rel="noopener") Follow me on IG
           .postcard__img-container 
             picture
               source(srcset="img/wing.webp" type="image/webp")
               img.postcard__img(src="img/wing.jpg" alt="")
 
-    .main-page__dribbble
-      .dribbble 
+      section.dribbble 
         .container-sm
           .dribbble__wrap 
             .dribbble__text-content 
@@ -340,7 +334,7 @@ block content
                 h2.h2 Dribbble
               .dribbble__description 
                 p.text-body-1.text-body-1_color_light-grey Each dribbble shot is made with love and care. Do check out my work on Dribbble. Likes and comments are appreciated.
-              a.underlined-link.text-body-2.text-body-2_color_white(href="#") Follow me on Dribbble
+              a.underlined-link.text-body-2.text-body-2_color_white(href="https://example.com/" target="_blank" rel="noopener") Follow me on Dribbble
             .dribbble__screen
               .dribbble__tab-bar
                 .dribbble__tab-bar-circle
@@ -351,8 +345,7 @@ block content
                   source(srcset="img/dribbble-screen.webp" type="image/webp")
                   img.dribbble__img(src="img/dribbble-screen.jpg" alt="")
 
-    .main-page__feedback
-      .feedback 
+      section.feedback 
         .container 
           .feedback__wrap 
             .feedback__text-content 
@@ -360,7 +353,7 @@ block content
                 h2.h2 This is what people say about me
               .feedback__description 
                 p.text-body-1.text-body-1_color_light-grey Here are a few lines from people who I have worked with over the past 8+ years in my design career.
-              a.underlined-link.text-body-2.text-body-2_color_white(href="#") See all testimonials
+              a.underlined-link.text-body-2.text-body-2_color_white(href="https://example.com/" target="_blank" rel="noopener") See all testimonials
             .feedback__cards 
               each elem in feedbackCards 
                 .feedback__card 
@@ -375,8 +368,7 @@ block content
                       p.text-body-1.text-body-1_color_light-grey= elem.person
                       p.text-body-1.text-body-1_color_light-grey= elem.position
 
-    .main-page__photography
-      .photography
+      section.photography(id="photography")
         .container 
           .photography__wrap 
             .photography__text-content 
@@ -391,24 +383,30 @@ block content
                     button.text-button.photography__gallery-btn.photography__gallery-btn_active= elem.category
                   else 
                     button.text-button.photography__gallery-btn= elem.category
+              //- each elem, index in photography
+              //-   if index == 0
+              //-     .photography__img-list.photography__img-list_active
+              //-       each item in elem.photo
+              //-         .photography__img-item
+              //-           picture.photography__picture
+              //-             source(srcset=`${item.imgPath}.webp` type="image/webp")
+              //-             img.photography__img(src=`${item.imgPath}.jpg` width="332" height="420" alt="")
+              //-   else 
+              //-     .photography__img-list
+              //-       each item in elem.photo
+              //-         .photography__img-item
+              //-           picture.photography__picture
+              //-             source(srcset=`${item.imgPath}.webp` type="image/webp")
+              //-             img.photography__img(src=`${item.imgPath}.jpg` width="332" height="420" alt="")
               each elem, index in photography
-                if index == 0
-                  .photography__img-list.photography__img-list_active
-                    each item in elem.photo
-                      .photography__img-item
-                        picture.photography__picture
-                          source(srcset=`${item.imgPath}.webp` type="image/webp")
-                          img.photography__img(src=`${item.imgPath}.jpg` width="332px" height="420px" alt="")
-                else 
-                  .photography__img-list
-                    each item in elem.photo
-                      .photography__img-item
-                        picture.photography__picture
-                          source(srcset=`${item.imgPath}.webp` type="image/webp")
-                          img.photography__img(src=`${item.imgPath}.jpg` width="332px" height="420px" alt="")
-                       
-    .main-page__contact
-      .contact 
+                .photography__img-list.photography__img-list_active
+                  each item in elem.photo
+                    .photography__img-item
+                      picture.photography__picture
+                        source(srcset=`img/australia-4.webp 2x, img/australia-1.webp 1x` type="image/webp" media="(min-width: 10000px)")
+                        img.photography__img(src=`img/australia-2.webp` srcset="img/australia-3.jpg 2x"  width="332" height="420" alt="")
+                        
+      section.contact(id="contact")
         .container-sm 
           .contact__wrap 
             .contact__text-content 
@@ -417,44 +415,46 @@ block content
               .contact__description 
                 p.text-body-1.text-body-1_color_light-grey Now that you know a lot about me, let me know if you are interested to work with me.
             form.contact__form(action="#" method="POST" name="contact-form")
-              label.contact__label.text-body-2.text-body-2_color_white Name
+              .contact__field
+                label.contact__label.text-body-2.text-body-2_color_white(for="contact-input-name") Name
                 .contact__input-wrap
-                  input.contact__input.text-body-1(type="text" name="name")
-              label.contact__label.text-body-2.text-body-2_color_white Email 
+                  input.contact__input.text-body-1(type="text" name="name" id="contact-input-name")
+              .contact__field
+                label.contact__label.text-body-2.text-body-2_color_white(for="contact-input-email") Email 
                 .contact__input-wrap
-                  input.contact__input.text-body-1(type="email" name="email")
-              label.contact__label.text-body-2.text-body-2_color_white Message
+                  input.contact__input.text-body-1(type="email" name="email" id="contact-input-email")
+              .contact__field
+                label.contact__label.text-body-2.text-body-2_color_white(for="contact-input-message") Message
                 .contact__input-wrap  
-                  textarea.contact__input.text-body-1(name="message", rows="2") 
+                  textarea.contact__input.text-body-1(name="message", rows="2" id="contact-input-message") 
               button.text-button.contact__btn(type="submit") Let’s get started
 
 
-    .main-page__footer
-      footer.footer 
-        .container
-          .footer__main-content
-            .footer__logo-social
-              a.footer__logo-wrap(href="#")
-                img.footer__logo(src="img/svg/logo.svg" alt="logo")
-              .footer__social-wrap
-                a.footer__social(href="#")
-                  img(src="img/svg/twitter.svg" alt="link to twitter")
-                a.footer__social(href="#")
-                  img(src="img/svg/dribbble.svg" alt="link to dribbble")
-                a.footer__social(href="#")
-                  img(src="img/svg/linkedin.svg" alt="link to linkedin")
-            .footer__links-wrap
-              ul.footer__links-list
-                each elem in footerLinks 
-                  li.footer__links-item
-                    a.footer__link.text-body-2.text-body-2_color_white(href=elem.url)= elem.name
+    
+    footer.footer 
+      .container
+        .footer__main-content
+          .footer__logo-social
+            a.footer__logo-wrap(href="#")
+              img.footer__logo(src="img/svg/logo.svg" alt="logo")
+            .footer__social-wrap
+              a.footer__social(href="https://example.com/" target="_blank" rel="noopener")
+                img(src="img/svg/twitter.svg" alt="link to twitter")
+              a.footer__social(href="https://example.com/" target="_blank" rel="noopener")
+                img(src="img/svg/dribbble.svg" alt="link to dribbble")
+              a.footer__social(href="https://example.com/" target="_blank" rel="noopener")
+                img(src="img/svg/linkedin.svg" alt="link to linkedin")
+          .footer__links-wrap
+            ul.footer__links-list
+              each elem in footerLinks 
+                li.footer__links-item
+                  a.footer__link.text-body-2.text-body-2_color_white(href=elem.url)= elem.name
 
-          .footer__copyright
-            p Not Copyright 2023 • Robin Williams. Webflow cloneable
-              
+        .footer__copyright
+          p Not Copyright 2023 • Robin Williams. Webflow cloneable
+            
 
 block scripts
-  //script(src="js/vendor.js")
   script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js')
-  script(type='text/javascript' src='//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js')
+  script(src='//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js')
   script(src="js/main.js")

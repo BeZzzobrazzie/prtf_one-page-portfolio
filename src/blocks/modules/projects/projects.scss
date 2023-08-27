@@ -1,9 +1,10 @@
 .projects {
-
+  scroll-margin: 72px;
   padding-top: 64px;
   padding-bottom: 70px;
 
   @include mb-up($md) {
+    scroll-margin: 88px;
     padding-top: 80px;
     padding-bottom: 80px;
   }

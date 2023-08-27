@@ -1,7 +1,8 @@
 .photography {
-
+  scroll-margin: 72px;
   padding: 48px 0;
   @include mb-up($md) {
+    scroll-margin: 88px;
     padding: 80px 0;
   }
   @include mb-up($xxl) {
