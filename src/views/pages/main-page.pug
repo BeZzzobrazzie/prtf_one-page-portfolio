@@ -416,17 +416,17 @@ block content
                 h2.h2 Let’s get started
               .contact__description 
                 p.text-body-1.text-body-1_color_light-grey Now that you know a lot about me, let me know if you are interested to work with me.
-            form.contact__form
+            form.contact__form(action="#" method="POST" name="contact-form")
               label.contact__label.text-body-2.text-body-2_color_white Name
                 .contact__input-wrap
-                  input.contact__input.text-body-1(type="text")
+                  input.contact__input.text-body-1(type="text" name="name")
               label.contact__label.text-body-2.text-body-2_color_white Email 
                 .contact__input-wrap
-                  input.contact__input.text-body-1(type="email")
+                  input.contact__input.text-body-1(type="email" name="email")
               label.contact__label.text-body-2.text-body-2_color_white Message
                 .contact__input-wrap  
-                  textarea.contact__input.text-body-1(name="", cols="30", rows="2") 
-              button Let’s get started
+                  textarea.contact__input.text-body-1(name="message", rows="2") 
+              button.text-button.contact__btn(type="submit") Let’s get started
 
 
     .main-page__footer
