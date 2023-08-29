@@ -404,8 +404,11 @@ block content
                     .photography__img-item
                       picture.photography__picture
                         source(srcset=`img/australia-2@test.webp 2x, img/australia-2@test.webp 1x` type="image/webp" media="(min-width: 10000px)")
-                        img.photography__img(src=`img/australia-2-306@1x.jpg` srcset="img/australia-2-306@1x.jpg 306w, img/australia-2-668@1x.jpg 668w, img/australia-2-727@1x.jpg 727w" sizes="(max-width: 768px) 727px, (max-width: 1440px) 668px, 306px"  width="332" height="420" alt="")
-                        
+                        source(srcset="img/australia-2-350@1x.jpg 350w, img/australia-2-550@1x.jpg 550w, img/australia-2-727@1x.jpg 727w" sizes="((max-width: 390px), (min-width: 768px) and (max-width: 804px), (min-width: 1440px)) 350px, ((min-width: 391px) and (max-width: 550px), (min-width: 805px) and (max-width: 1204px)) 550px, ((min-width: 551px) and (max-width: 768px), (min-width: 1205px) and (max-width: 1439px)) 727px" type="image/jpg" )
+                        img.photography__img(src=`img/australia-2-350@1x.jpg` alt="")
+                        // width="332" height="420"
+                        //srcset="img/australia-2-350@1x.jpg 350w, img/australia-2-550@1x.jpg 550w, img/australia-2-727@1x.jpg 727w" sizes="((max-width: 390px), (min-width: 768px) and (max-width: 804px), (min-width: 1440px)) 350px, ((min-width: 391px) and (max-width: 550px), (min-width: 805px) and (max-width: 1204px)) 550px, ((min-width: 551px) and (max-width: 768px), (min-width: 1205px) and (max-width: 1439px)) 727px" 
+
       section.contact(id="contact")
         .container-sm 
           .contact__wrap 
