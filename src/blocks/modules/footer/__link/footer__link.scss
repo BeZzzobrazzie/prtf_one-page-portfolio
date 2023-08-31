@@ -6,6 +6,10 @@
   &:hover {
     text-decoration: underline 1px solid;
   }
+  @include mb-up($md) {
+    display: flex;
+    align-items: center;
+  }
 
   //import section
 }

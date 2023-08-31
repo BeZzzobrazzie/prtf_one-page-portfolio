@@ -4,11 +4,11 @@
 
   @include mb-up($md) {
     display: block;
-    flex: 0 1 45%;
+    flex: 0 1 50%;
     margin-bottom: 0;
   }
   @include mb-up($xxl) {
-    transform: translateX(44px);
+    transform: translateX(24px);
     flex: 0 0 750px;
     position: relative;
     z-index: 2;

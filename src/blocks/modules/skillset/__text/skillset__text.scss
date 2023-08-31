@@ -1,8 +1,14 @@
 &__text {
   margin-bottom: 48px;
+  padding-top: 14px;
+  padding-bottom: 21px;
 
+  @include mb-up($md) {
+    padding: 0;
+  }
   @include mb-up($xxl) {
     margin-bottom: 0;
+
   }
 
   //import section

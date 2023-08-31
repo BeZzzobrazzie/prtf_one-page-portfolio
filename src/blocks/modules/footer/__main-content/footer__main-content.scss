@@ -1,8 +1,9 @@
 &__main-content {
-
+  margin-bottom: 37px;
   @include mb-up($md) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 45px;
   }
   //import section
 }

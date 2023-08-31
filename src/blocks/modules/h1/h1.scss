@@ -1,9 +1,15 @@
 .h1 {
   font-family: 'Sen', sans-serif;
-  //font-size: 78px;
   @include adaptiv-font(78, 32);
   font-weight: 700;
   color: $text;
-  line-height: 1.15;
-
+  line-height: 1.13;
+  //font-size: 32px;
+  @include mb-up($md) {
+    //font-size: 56px;
+    line-height: 1.2;
+  }
+  // @include mb-up($xxl) {
+  //   font-size: 78px;
+  // }
 }

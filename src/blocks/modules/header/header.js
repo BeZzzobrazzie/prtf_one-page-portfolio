@@ -9,6 +9,18 @@ function hBurgerClick() {
   body.classList.toggle('body__lock');
 }
 
+let links = document.querySelectorAll('.header__link');
+
+function hLinkClick() {
+  if (burger.classList.contains('header__burger_active')) {
+    hBurgerClick();
+  }
+}
+
+for (let link of links) {
+  link.addEventListener('click', hLinkClick);
+}
+
 // =====================
 
 window.addEventListener('scroll', hScrollWindow);

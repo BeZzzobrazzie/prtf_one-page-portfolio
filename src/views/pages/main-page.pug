@@ -52,26 +52,38 @@ block variables
       {
         "logoPath": "img/svg/cbre.svg",
         "alt": "CBRE",
+        "width": "85",
+        "height": "21",
       },
       {
         "logoPath": "img/svg/epiq.svg",
         "alt": "EPIQ",
+        "width": "71",
+        "height": "29",
       },
       {
         "logoPath": "img/svg/f.svg",
         "alt": "F",
+        "width": "28",
+        "height": "29",
       },
       {
         "logoPath": "img/svg/leaf.svg",
         "alt": "Leaf",
+        "width": "21",
+        "height": "21",
       },
       {
         "logoPath": "img/svg/a-place-for-mom.svg",
         "alt": "a Place for Mom",
+        "width": "154",
+        "height": "25",
       },
       {
         "logoPath": "img/svg/m.svg",
         "alt": "M",
+        "width": "42",
+        "height": "21",
       },      
     ]
   -
@@ -229,9 +241,10 @@ block content
         .annotation
           .annotation__img-container
             picture
-              source(media="(min-width: 768px)" srcset="img/person.webp 750w" sizes="750px" type="image/webp")
-              source(srcset="img/annotation-person_750-650.webp" type="image/webp")
-              img.annotation__img(src="img/person.jpg" width="750" height="650" alt="annotation-person")
+              source(srcset=`img/person-384@2x.webp 2x, img/person-384@1x.webp 1x` type="image/webp" media="(max-width: 384px), (min-width: 768px) and (max-width: 768px)")
+              source(srcset=`img/person-580@2x.webp 2x, img/person-580@1x.webp 1x` type="image/webp" media="(min-width: 385px) and (max-width: 580px), (min-width: 769px) and (max-width: 1160px)")
+              source(srcset=`img/person-767@2x.webp 2x, img/person-767@1x.webp 1x` type="image/webp" media="(min-width: 581px) and (max-width: 767px), (min-width: 1161px)")
+              img.annotation__img(src="img/person-384@1x.jpg" height="600" width="720" alt="")
 
           .annotation__body
             .annotation__heading 
@@ -255,16 +268,21 @@ block content
 
       section.postcard 
         .postcard__container 
-          .postcard__text-content 
-            .postcard__heading 
-              h2.h2.h2_color_level-1 Philosophy & values
-            .postcard__description 
-              p.text-body-1.text-body-1_color_dark-grey I think everyone wants the same thing - relationship with humanity, peace with the metaphysical, and experience with the universe. I try to grasp these things with my values: authenticity, creativity, & hospitality.
-            a.underlined-link.text-body-2.text-body-2_color_level-1(href="https://example.com/" target="_blank" rel="noopener") More about me
+          .postcard__text-content
+            .postcard__text-content-top
+              .postcard__heading 
+                h2.h2.h2_color_level-1 Philosophy & values
+              .postcard__description 
+                p.text-body-1.text-body-1_color_dark-grey I think everyone wants the same thing - relationship with humanity, peace with the metaphysical, and experience with the universe. I try to grasp these things with my values: authenticity, creativity, & hospitality.
+            .postcard__underlined-link
+              a.underlined-link.text-body-2.text-body-2_color_level-1(href="https://example.com/" target="_blank" rel="noopener") More about me
           .postcard__img-container 
             picture
-              source(srcset="img/values-sphere.webp" type="image/webp")
-              img.postcard__img(src="img/values-sphere.jpeg" alt="")
+              //source(srcset="img/values-sphere.webp" type="image/webp")
+              source(srcset=`img/postcard-sphere-384@2x.webp 2x, img/postcard-sphere-384@1x.webp 1x` type="image/webp" media="(max-width: 384px), (min-width: 768px) and (max-width: 768px)")
+              source(srcset=`img/postcard-sphere-580@2x.webp 2x, img/postcard-sphere-580@1x.webp 1x` type="image/webp" media="(min-width: 385px) and (max-width: 580px), (min-width: 769px) and (max-width: 1160px)")
+              source(srcset=`img/postcard-sphere-767@2x.webp 2x, img/postcard-sphere-767@1x.webp 1x` type="image/webp" media="(min-width: 581px) and (max-width: 767px), (min-width: 1161px)")
+              img.postcard__img(src="img/postcard-sphere-384@1x.jpg" alt="" width="720" height="650" loading="lazy")
 
       section.skillset 
         .container 
@@ -275,7 +293,7 @@ block content
             .skillset__cards
               each elem in skillsetCards
                 .skillset__card 
-                  img.skillset__card-logo(src=elem.logoPath width="32" height="32" alt="") 
+                  img.skillset__card-logo(src=elem.logoPath width="32" height="32" alt="" loading="lazy") 
                   h3.h3.skillset__card-title= elem.title
                   p.text-body-2.skillset__card-text= elem.text
 
@@ -285,12 +303,12 @@ block content
             each elem in carouselItems 
               .carousel__wrap-item
                 .carousel__item
-                  img.carousel__img(src=elem.logoPath alt=elem.alt)
+                  img.carousel__img(src=elem.logoPath alt=elem.alt width=elem.width height=elem.height)
         .carousel-m
           each elem in carouselItems 
             .carousel-m__wrap-item
               .carousel-m__item
-                img.carousel-m__img(src=elem.logoPath alt=elem.alt)
+                img.carousel-m__img(src=elem.logoPath alt=elem.alt width=elem.width height=elem.height)
 
       section.projects(id="projects")
         .container
@@ -304,7 +322,7 @@ block content
                 .projects__img-container
                   picture
                     source(srcset=`${elem.imgPath}.webp` type="image/webp")
-                    img.projects__img(src=`${elem.imgPath}.jpg` alt="")
+                    img.projects__img(src=`${elem.imgPath}.jpg` alt="" loading="lazy")
                 .projects__card-text
                   .projects__card-title
                     h3.h3= elem.title
@@ -316,15 +334,17 @@ block content
       section.postcard.postcard_bc_violet
         .postcard__container 
           .postcard__text-content 
-            .postcard__heading 
-              h2.h2.h2_color_level-1 Instagram
-            .postcard__description 
-              p.text-body-1.text-body-1_color_dark-grey If you area a person who enjoys photography, then I highly recommend that you check out my Instagram. I’m an avid traveller and I capture the best moments that I would love to cherish with the world
-            a.underlined-link.text-body-2.text-body-2_color_level-1(href="https://example.com/" target="_blank" rel="noopener") Follow me on IG
+            .postcard__text-content-top
+              .postcard__heading 
+                h2.h2.h2_color_level-1 Instagram
+              .postcard__description 
+                p.text-body-1.text-body-1_color_dark-grey If you area a person who enjoys photography, then I highly recommend that you check out my Instagram. I’m an avid traveller and I capture the best moments that I would love to cherish with the world
+            .postcard__underlined-link
+              a.underlined-link.text-body-2.text-body-2_color_level-1(href="https://example.com/" target="_blank" rel="noopener") Follow me on IG
           .postcard__img-container 
             picture
               source(srcset="img/wing.webp" type="image/webp")
-              img.postcard__img(src="img/wing.jpg" alt="")
+              img.postcard__img(src="img/wing.jpg" alt="" loading="lazy")
 
       section.dribbble 
         .container-sm
@@ -343,7 +363,7 @@ block content
               .dribbble__img-container
                 picture
                   source(srcset="img/dribbble-screen.webp" type="image/webp")
-                  img.dribbble__img(src="img/dribbble-screen.jpg" alt="")
+                  img.dribbble__img(src="img/dribbble-screen.jpg" alt="" loading="lazy")
 
       section.feedback 
         .container 
@@ -359,8 +379,11 @@ block content
                 .feedback__card 
                   .feedback__img-container
                     picture
-                      source(srcset=`${elem.imgPath}.webp` type="image/webp")
-                      img.feedback__img(src=`${elem.imgPath}.jpg` alt="")
+                      //source(srcset=`${elem.imgPath}.webp` type="image/webp")
+                      source(srcset=`img/feedback-2-725@2x.webp 2x, img/feedback-2-300@1x.webp 1x` type="image/webp" media="(max-width: 342px)")
+                      source(srcset=`img/feedback-2-725@2x.webp 2x, img/feedback-2-500@1x.webp 1x` type="image/webp" media="(min-width: 343px) and (max-width: 542px), (min-width: 768px) and (max-width: 1108px)")
+                      source(srcset=`img/feedback-2-725@2x.webp 2x, img/feedback-2-725@1x.webp 1x` type="image/webp" media="(min-width: 543px) and (max-width: 767px), (min-width: 1109px)")
+                      img.feedback__img(src=`${elem.imgPath}.jpg` alt="" loading="lazy")
                   .feedback__card-text
                     .feedback__card-title
                       h3.h3= elem.text
@@ -403,11 +426,10 @@ block content
                   each item in elem.photo
                     .photography__img-item
                       picture.photography__picture
-                        source(srcset=`img/australia-2@test.webp 2x, img/australia-2@test.webp 1x` type="image/webp" media="(min-width: 10000px)")
-                        source(srcset="img/australia-2-350@1x.jpg 350w, img/australia-2-550@1x.jpg 550w, img/australia-2-727@1x.jpg 727w" sizes="((max-width: 390px), (min-width: 768px) and (max-width: 804px), (min-width: 1440px)) 350px, ((min-width: 391px) and (max-width: 550px), (min-width: 805px) and (max-width: 1204px)) 550px, ((min-width: 551px) and (max-width: 768px), (min-width: 1205px) and (max-width: 1439px)) 727px" type="image/jpg" )
-                        img.photography__img(src=`img/australia-2-350@1x.jpg` alt="")
-                        // width="332" height="420"
-                        //srcset="img/australia-2-350@1x.jpg 350w, img/australia-2-550@1x.jpg 550w, img/australia-2-727@1x.jpg 727w" sizes="((max-width: 390px), (min-width: 768px) and (max-width: 804px), (min-width: 1440px)) 350px, ((min-width: 391px) and (max-width: 550px), (min-width: 805px) and (max-width: 1204px)) 550px, ((min-width: 551px) and (max-width: 768px), (min-width: 1205px) and (max-width: 1439px)) 727px" 
+                        source(srcset=`img/australia-2-350@2x.webp 2x, img/australia-2-350@1x.webp 1x` type="image/webp" media="(max-width: 390px), (min-width: 768px) and (max-width: 804px), (min-width: 1440px)")
+                        source(srcset=`img/australia-2-550@2x.webp 2x, img/australia-2-550@1x.webp 1x` type="image/webp" media="(min-width: 391px) and (max-width: 550px), (min-width: 805px) and (max-width: 1204px)")
+                        source(srcset=`img/australia-2-727@2x.webp 2x, img/australia-2-727@1x.webp 1x` type="image/webp" media="(min-width: 551px) and (max-width: 767px), (min-width: 1205px) and (max-width: 1439px)")
+                        img.photography__img(src=`img/australia-2-350@1x.jpg` alt="" loading="lazy" height="420")
 
       section.contact(id="contact")
         .container-sm 
@@ -442,11 +464,11 @@ block content
               img.footer__logo(src="img/svg/logo.svg" alt="logo")
             .footer__social-wrap
               a.footer__social(href="https://example.com/" target="_blank" rel="noopener")
-                img(src="img/svg/twitter.svg" alt="link to twitter")
+                img.footer__social-img(src="img/svg/twitter.svg" alt="link to twitter" width="24px" height="24px")
               a.footer__social(href="https://example.com/" target="_blank" rel="noopener")
-                img(src="img/svg/dribbble.svg" alt="link to dribbble")
+                img.footer__social-img(src="img/svg/dribbble.svg" alt="link to dribbble" width="24px" height="24px")
               a.footer__social(href="https://example.com/" target="_blank" rel="noopener")
-                img(src="img/svg/linkedin.svg" alt="link to linkedin")
+                img.footer__social-img(src="img/svg/linkedin.svg" alt="link to linkedin" width="24px" height="24px")
           .footer__links-wrap
             ul.footer__links-list
               each elem in footerLinks 

@@ -1,5 +1,7 @@
 &__cards {
-
+  display: flex;
+  flex-direction: column;
+  gap: 48px 0;
 
   @include mb-up($md) {
     display: grid;
