@@ -118,7 +118,7 @@ block variables
         "position": "CEO, Company 1",
       },
       {
-        "imgPath": "img/feedback-img-2",
+        "imgPath": "img/feedback-2-725@1x",
         "text": "‘’I think Robin has an incredible gift. It has been an absolute pleasure to work with a designer of this caliber.’’",
         "person": "Emily Parker",
         "position": "CEO, Company 2",
@@ -136,16 +136,16 @@ block variables
         "category": "Italy",
         "photo": [
           {
-            "imgPath": "img/Italy-1",
+            "imgPath": "img/italy-1",
           },
           {
-            "imgPath": "img/Italy-2",
+            "imgPath": "img/italy-2",
           },
           {
-            "imgPath": "img/Italy-3",
+            "imgPath": "img/italy-3",
           },
           {
-            "imgPath": "img/Italy-4",
+            "imgPath": "img/italy-4",
           },
         ]
       },
@@ -153,16 +153,16 @@ block variables
         "category": "Australia",
         "photo": [
           {
-            "imgPath": "img/Australia-1",
+            "imgPath": "img/australia-1",
           },
           {
-            "imgPath": "img/Australia-2",
+            "imgPath": "img/australia-2-727@1x",
           },
           {
-            "imgPath": "img/Australia-3",
+            "imgPath": "img/australia-3",
           },
           {
-            "imgPath": "img/Australia-4",
+            "imgPath": "img/australia-4",
           },
         ]
       },
@@ -170,16 +170,16 @@ block variables
         "category": "India",
         "photo": [
           {
-            "imgPath": "img/India-1",
+            "imgPath": "img/india-1",
           },
           {
-            "imgPath": "img/India-2",
+            "imgPath": "img/india-2",
           },
           {
-            "imgPath": "img/India-3",
+            "imgPath": "img/india-3",
           },
           {
-            "imgPath": "img/India-4",
+            "imgPath": "img/india-4",
           },
         ]
       },
@@ -187,16 +187,16 @@ block variables
         "category": "Brazil",
         "photo": [
           {
-            "imgPath": "img/Brazil-1",
+            "imgPath": "img/brazil-1",
           },
           {
-            "imgPath": "img/Brazil-2",
+            "imgPath": "img/brazil-2",
           },
           {
-            "imgPath": "img/Brazil-3",
+            "imgPath": "img/brazil-3",
           },
           {
-            "imgPath": "img/Brazil-4",
+            "imgPath": "img/brazil-4",
           },
         ]
       },
@@ -379,10 +379,10 @@ block content
                 .feedback__card 
                   .feedback__img-container
                     picture
-                      //source(srcset=`${elem.imgPath}.webp` type="image/webp")
-                      source(srcset=`img/feedback-2-725@2x.webp 2x, img/feedback-2-300@1x.webp 1x` type="image/webp" media="(max-width: 342px)")
-                      source(srcset=`img/feedback-2-725@2x.webp 2x, img/feedback-2-500@1x.webp 1x` type="image/webp" media="(min-width: 343px) and (max-width: 542px), (min-width: 768px) and (max-width: 1108px)")
-                      source(srcset=`img/feedback-2-725@2x.webp 2x, img/feedback-2-725@1x.webp 1x` type="image/webp" media="(min-width: 543px) and (max-width: 767px), (min-width: 1109px)")
+                      source(srcset=`${elem.imgPath}.webp` type="image/webp")
+                      //- source(srcset=`img/feedback-2-725@2x.webp 2x, img/feedback-2-300@1x.webp 1x` type="image/webp" media="(max-width: 342px)")
+                      //- source(srcset=`img/feedback-2-725@2x.webp 2x, img/feedback-2-500@1x.webp 1x` type="image/webp" media="(min-width: 343px) and (max-width: 542px), (min-width: 768px) and (max-width: 1108px)")
+                      //- source(srcset=`img/feedback-2-725@2x.webp 2x, img/feedback-2-725@1x.webp 1x` type="image/webp" media="(min-width: 543px) and (max-width: 767px), (min-width: 1109px)")
                       img.feedback__img(src=`${elem.imgPath}.jpg` alt="" loading="lazy")
                   .feedback__card-text
                     .feedback__card-title
@@ -406,30 +406,30 @@ block content
                     button.text-button.photography__gallery-btn.photography__gallery-btn_active= elem.category
                   else 
                     button.text-button.photography__gallery-btn= elem.category
-              //- each elem, index in photography
-              //-   if index == 0
-              //-     .photography__img-list.photography__img-list_active
-              //-       each item in elem.photo
-              //-         .photography__img-item
-              //-           picture.photography__picture
-              //-             source(srcset=`${item.imgPath}.webp` type="image/webp")
-              //-             img.photography__img(src=`${item.imgPath}.jpg` width="332" height="420" alt="")
-              //-   else 
-              //-     .photography__img-list
-              //-       each item in elem.photo
-              //-         .photography__img-item
-              //-           picture.photography__picture
-              //-             source(srcset=`${item.imgPath}.webp` type="image/webp")
-              //-             img.photography__img(src=`${item.imgPath}.jpg` width="332" height="420" alt="")
               each elem, index in photography
-                .photography__img-list.photography__img-list_active
-                  each item in elem.photo
-                    .photography__img-item
-                      picture.photography__picture
-                        source(srcset=`img/australia-2-350@2x.webp 2x, img/australia-2-350@1x.webp 1x` type="image/webp" media="(max-width: 390px), (min-width: 768px) and (max-width: 804px), (min-width: 1440px)")
-                        source(srcset=`img/australia-2-550@2x.webp 2x, img/australia-2-550@1x.webp 1x` type="image/webp" media="(min-width: 391px) and (max-width: 550px), (min-width: 805px) and (max-width: 1204px)")
-                        source(srcset=`img/australia-2-727@2x.webp 2x, img/australia-2-727@1x.webp 1x` type="image/webp" media="(min-width: 551px) and (max-width: 767px), (min-width: 1205px) and (max-width: 1439px)")
-                        img.photography__img(src=`img/australia-2-350@1x.jpg` alt="" loading="lazy" height="420")
+                if index == 0
+                  .photography__img-list.photography__img-list_active
+                    each item in elem.photo
+                      .photography__img-item
+                        picture.photography__picture
+                          source(srcset=`${item.imgPath}.webp` type="image/webp")
+                          img.photography__img(src=`${item.imgPath}.jpg` width="332" height="420" alt="")
+                else 
+                  .photography__img-list
+                    each item in elem.photo
+                      .photography__img-item
+                        picture.photography__picture
+                          source(srcset=`${item.imgPath}.webp` type="image/webp")
+                          img.photography__img(src=`${item.imgPath}.jpg` width="332" height="420" alt="")
+              //- each elem, index in photography
+              //-   .photography__img-list.photography__img-list_active
+              //-     each item in elem.photo
+              //-       .photography__img-item
+              //-         picture.photography__picture
+              //-           source(srcset=`img/australia-2-350@2x.webp 2x, img/australia-2-350@1x.webp 1x` type="image/webp" media="(max-width: 390px), (min-width: 768px) and (max-width: 804px), (min-width: 1440px)")
+              //-           source(srcset=`img/australia-2-550@2x.webp 2x, img/australia-2-550@1x.webp 1x` type="image/webp" media="(min-width: 391px) and (max-width: 550px), (min-width: 805px) and (max-width: 1204px)")
+              //-           source(srcset=`img/australia-2-727@2x.webp 2x, img/australia-2-727@1x.webp 1x` type="image/webp" media="(min-width: 551px) and (max-width: 767px), (min-width: 1205px) and (max-width: 1439px)")
+              //-           img.photography__img(src=`img/australia-2-350@1x.jpg` alt="" loading="lazy" height="420")
 
       section.contact(id="contact")
         .container-sm 
@@ -461,7 +461,7 @@ block content
         .footer__main-content
           .footer__logo-social
             a.footer__logo-wrap(href="#")
-              img.footer__logo(src="img/svg/logo.svg" alt="logo")
+              img.footer__logo(src="img/svg/logo.svg" alt="logo" width="131" height="40")
             .footer__social-wrap
               a.footer__social(href="https://example.com/" target="_blank" rel="noopener")
                 img.footer__social-img(src="img/svg/twitter.svg" alt="link to twitter" width="24px" height="24px")
