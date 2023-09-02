@@ -1,9 +1,0 @@
-&__nav-elem {
-  list-style: none;
-  //margin-bottom: 20px;
-
-  @include mb-up($md) {
-    //margin-left: 20px;
-    margin-bottom: 0;
-  }
-}

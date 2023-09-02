@@ -1,9 +1,0 @@
-&__position {
-  margin-bottom: 16px;
-
-  @include mb-up($md) {
-    //margin-top: 10px;
-    margin-bottom: 20px;
-  }
-  //import section
-}
