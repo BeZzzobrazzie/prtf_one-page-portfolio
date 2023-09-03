@@ -1,8 +1,3 @@
-
-
-console.log('carousel-m');
-
-
 $(document).ready(function(){
   $('.carousel-m').slick({
 

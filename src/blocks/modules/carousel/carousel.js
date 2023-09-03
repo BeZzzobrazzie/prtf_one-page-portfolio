@@ -1,8 +1,3 @@
-
-
-console.log('carousel');
-
-
 $(document).ready(function(){
   $('.carousel').slick({
     prevArrow: '',
